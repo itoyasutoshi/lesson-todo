@@ -38,6 +38,7 @@
     </tr>
     </thead>
     <tbody class="table-hover">
+    <!-- indexメソッドのcompact関数で与えられた$todos -->
     @foreach($todos as $todo)
     <tr>
         <td>{{ $todo->title }}</td>
