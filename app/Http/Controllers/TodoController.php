@@ -46,7 +46,6 @@ class TodoController extends Controller
     {
       $input = $request->all();
       $this->todo->where('id', $id)->update(['title' => $input['title']]);
-
       return redirect()->to('todo');
     }
 

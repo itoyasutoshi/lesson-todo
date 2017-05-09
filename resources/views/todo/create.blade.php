@@ -25,7 +25,9 @@
         <div class="form-group">
             {!! Form::input('text', 'title', null, ['required', 'class' => 'form-control', 'placeholder' => 'ToDo内容']) !!}
         </div>
+        @if(Auth::check())
         <button type="submit" class="btn btn-success pull-right">追加</button>
+        @endif
     {!! Form::close() !!}
     <!-- Scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

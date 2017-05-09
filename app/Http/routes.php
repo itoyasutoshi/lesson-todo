@@ -15,3 +15,16 @@ Route::resource('todo', 'TodoController');
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::auth();
+
+Route::get('home', 'TodoController@index');
+
+ // Route::group(['middleware' => ['auth']], function () {
+ //        // この中はログインされている場合のみルーティングされる
+ //        Route::get('/todo', function () {
+ //            return view('todo.index');
+ //    });
+ //  });
