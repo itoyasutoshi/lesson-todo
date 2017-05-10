@@ -21,14 +21,14 @@
 <body>
 <div class="container">
     <h2 class="page-header">ToDo作成</h2>
+    @if(Auth::check())
     {!! Form::open(['route' => 'todo.store']) !!}
         <div class="form-group">
             {!! Form::input('text', 'title', null, ['required', 'class' => 'form-control', 'placeholder' => 'ToDo内容']) !!}
         </div>
-        @if(Auth::check())
         <button type="submit" class="btn btn-success pull-right">追加</button>
-        @endif
     {!! Form::close() !!}
+    @endif
     <!-- Scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
