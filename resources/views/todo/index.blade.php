@@ -1,12 +1,10 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('content')
 <body>
 <div class="container">
 <h2 class="page-header">ToDo一覧</h2>
     @if(Auth::check())
-    <p style="display: inline-block; margin-right: 50px;">USER NAME: <strong>{{ Auth::user()->name }}</strong></p>
-    <a href="{{ url('/logout') }}" style="display: inline-block;">Logout</a>
     <p class="pull-right"><a class="btn btn-success" href="/todo/create">追加</a></p>
     @endif
 <table class="table table-hover todo-table">

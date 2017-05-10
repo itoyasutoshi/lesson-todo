@@ -34,8 +34,7 @@ class TodoController extends Controller
 
       return redirect()->to('todo');
     }
-    // eloquentの中にある$idが来てる
-    // すなわちデータベースに保存されてるid
+
     public function edit($id)
     {
       $todo = $this->todo->find($id);
