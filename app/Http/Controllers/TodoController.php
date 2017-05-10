@@ -8,11 +8,12 @@ use App\Http\Requests;
 
 class TodoController extends Controller
 {
-    private $todo;
+    protected $todo;
 
     public function __construct(Todo $todo)
     {
       $this->todo = $todo;
+      $this->middleware('auth');
     }
 
     public function index()
