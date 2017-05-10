@@ -12,9 +12,7 @@
 */
 Route::resource('todo', 'TodoController');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TodoController@index');
 
 
 
